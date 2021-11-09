@@ -1,15 +1,10 @@
-/*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body');
 
-	// Breakpoints.
+	// Limitaciones
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
 			large:    [ '981px',   '1280px' ],
@@ -18,18 +13,18 @@
 			xsmall:   [ null,      '480px'  ]
 		});
 
-	// Play initial animations on page load.
+	// Animacion Inicial
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Touch mode.
+	// Touch celular
 		if (browser.mobile)
 			$body.addClass('is-touch');
 
-	// Scrolly links.
+	// Bajar con celular
 		$('.scrolly').scrolly({
 			speed: 2000
 		});
@@ -42,7 +37,7 @@
 
 	// Nav.
 
-		// Title Bar.
+		// Barra de Título
 			$(
 				'<div id="titleBar">' +
 					'<a href="#navPanel" class="toggle"></a>' +
@@ -72,7 +67,7 @@
 				});
 
 	// Parallax.
-	// Disabled on IE (choppy scrolling) and mobile platforms (poor performance).
+	// Disabled on IE (choppy scrolling) and mobile platforms (no sé mucho así que es algo pobre).
 		if (browser.name == 'ie'
 		||	browser.mobile) {
 
